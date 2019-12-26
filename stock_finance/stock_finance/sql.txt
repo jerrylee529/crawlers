@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS `capubinfo`;
+CREATE TABLE `capubinfo` (
+  `cip_no` varchar(16) NOT NULL COMMENT 'cip核字号',
+  `publisher` varchar(64) NOT NULL COMMENT '出版商',
+  `book_name` varchar(64) NOT NULL COMMENT '书名',
+  `publish_datetime` varchar(12) NOT NULL COMMENT '出版时间',
+  `update_time` timestamp NOT NULL COMMENT '更新时间',
+  `owner` varchar(32) NOT NULL COMMENT '原著',
+  `author` varchar(64) NOT NULL COMMENT '作者或者编者',
+  PRIMARY KEY (`cip_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

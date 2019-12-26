@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS `wdzj_info`;
+CREATE TABLE `wdzj_info` (
+  `id` int(4) primary key not null auto_increment,
+  `company_name` varchar(32) NOT NULL COMMENT '公司名称',
+  `register_city` varchar(32) NOT NULL COMMENT '注册地',
+  `amount` decimal(12,2) NOT NULL COMMENT '成交量(万元)',
+  `income_rate` float NOT NULL COMMENT '平均预期收益率(%)',
+  `loan_period` float NOT NULL COMMENT '平均借款期限(月)',
+  `collected_balance` decimal(12,2) NOT NULL COMMENT '待还余额(万元)',
+  `update_time` timestamp NOT NULL COMMENT '更新时间',
+  KEY `idx_company_name` (`company_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
